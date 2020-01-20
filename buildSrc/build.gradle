@@ -1,0 +1,21 @@
+apply plugin: 'groovy'
+
+dependencies {
+
+    implementation gradleApi()//gradle sdk
+    implementation localGroovy()//groovy sdk
+}
+
+sourceCompatibility = "7"
+targetCompatibility = "7"
+
+sourceSets {
+    main {
+        groovy {
+            srcDir 'src/main/groovy'
+        }
+        resources {
+            srcDir 'src/main/resources'
+        }
+    }
+}
